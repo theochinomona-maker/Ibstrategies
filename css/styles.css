@@ -783,3 +783,16 @@ h2 {
 .about-image img:hover {
   transform: scale(1.05) translateY(-10px);
 }
+
+.map-container {
+  width: 100%;
+  max-width: 1200px; /* or larger */
+  margin: 0 auto;
+}
+
+.map-container iframe {
+  width: 100%;
+  min-width: 800px; /* Ensure minimum width for info panel */
+  height: 450px;
+}
+

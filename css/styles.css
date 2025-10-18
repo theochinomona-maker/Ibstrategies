@@ -775,3 +775,11 @@ h2 {
     margin: 0 auto 15px;
   }
 }
+
+.about-image img {
+  transition: transform 0.4s cubic-bezier(.21,1.03,.64,1);
+}
+
+.about-image img:hover {
+  transform: scale(1.05) translateY(-10px);
+}

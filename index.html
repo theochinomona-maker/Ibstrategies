@@ -5,6 +5,10 @@
   <title>Integrated Business Strategies: Dedicated to Delivery Excellence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/containers.css">
+  <link rel="stylesheet" href="css/about-hero.css">
+  <link rel="stylesheet" href="css/typewriter.css">
+
 </head>
 <body>
 
@@ -32,44 +36,43 @@
 </div>
 
 <!-- Welcome/About Section -->
-<section class="full-width-section">
-  <div class="about-welcome slide-in-from-right">
+<section class="full-width-section about-hero-section">
+  <div class="about-welcome">
     <div class="about-text">
       <p class="section-subtitle">WELCOME TO</p>
       <h2>Integrated Business Strategies</h2>
-      <p>
-        Empowering South African organizations with expert consulting, engineering, and training solutions. Our dedicated team delivers tailored process improvements and compliance support—helping your business achieve excellence and sustainable growth.
-      </p>
+      <p id="typewriter-text" class="typewriter"></p>
+
       <a href="about.html" class="read-more-btn">READ MORE</a>
     </div>
     <div class="about-image">
-      <img src="images/office.jpg" alt="Office Building">
+      <img src="images/about-image.png" alt="City Skyline">
     </div>
   </div>
 </section>
+
+
 
 <!-- Services Section -->
 <section class="full-width-section">
   <p class="section-subtitle">WHAT WE'RE DOING</p>
   <h2>Services We Offer</h2>
   <div class="services">
-    <div class="service-card">
-      <img src="images/services/ppe.jpg" alt="PPE Manufacturing">
-      <h3>PPE Manufacturing and Supply</h3>
-      <a href="services.html">READ MORE &rarr;</a>
-    </div>
-    <div class="service-card">
-      <img src="images/services/cleaning.jpg" alt="Cleaning">
-      <h3>Commercial and Industrial Cleaning</h3>
-      <a href="services.html">READ MORE &rarr;</a>
-    </div>
-    <div class="service-card">
-      <img src="images/services/petroleum.jpg" alt="Petroleum">
-      <h3>Petroleum products gas supply</h3>
-      <a href="services.html">READ MORE &rarr;</a>
-    </div>
+    <a href="shreq-training.html" class="service-card">
+      <img src="images\services\SHREQ Training.png" alt="SHREQ Training">
+      <h3>SHREQ Training</h3>
+    </a>
+    <a href="iso-certification.html" class="service-card">
+      <img src="images\services\ISO Certificates.png" alt="ISO Certification">
+      <h3>ISO Certificates</h3>
+    </a>
+    <a href="services.html" class="service-card">
+      <img src="images\services\setas.png" alt="SETAs">
+      <h3>SETAs</h3>
+    </a>
   </div>
 </section>
+
 
 <!-- Hero/Professionalism Section -->
 <section class="hero full-width-section">
@@ -103,7 +106,7 @@
 </section>
 
 <!-- Clients Section as sliding carousel -->
-<section class="full-width-section" id="clients-section">
+<!-- <section class="full-width-section" id="clients-section">
   <p class="section-subtitle">Clients</p>
   <h2>Clients</h2>
   <div class="clients-logos-slider">
@@ -116,7 +119,7 @@
       <img src="images/clients/transnet.png" alt="Transnet">
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Book a Meeting Section centralized -->
 <section class="meeting-section centered full-width-section">
@@ -135,5 +138,23 @@
 <script src="js/smoothScroll.js"></script>
 <script src="js/dropdown.js"></script>
 <script src="js/mobileMenu.js"></script>
+
+<script type="module">
+  import { typewriter } from './js/typewriter.js';
+  typewriter({
+    element: document.getElementById('typewriter-text'),
+    textArray: [
+      "Driving business growth and compliance for South African organizations.",
+      "We deliver expert consulting, engineering, and tailored training to help you achieve operational excellence.",
+      "Our dedicated team supports your journey to quality, safety, and long-term success."
+    ],
+    typingSpeed: 35,
+    pauseAfterType: 2600,
+    erasingSpeed: 15,
+    pauseAfterErase: 1000
+  });
+</script>
+
+
 </body>
 </html>

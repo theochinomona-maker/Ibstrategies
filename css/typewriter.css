@@ -1,0 +1,41 @@
+.about-text {
+  flex: 1 1 0;
+  background: #fff;
+  min-width: 340px;
+  max-width: 540px;
+  min-height: 330px;
+  height: 330px;
+  padding: 32px 36px 32px 40px;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(4,52,91,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.read-more-btn {
+  align-self: flex-start;
+  margin-top: 16px;
+}
+
+
+.typewriter {
+  border-right: 2px solid #04345b;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  display: block;
+  min-height: 44px;   /* Ensures space in container */
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#typewriter-text {
+  visibility: hidden;
+}
+
+
+
+.read-more-btn {
+  align-self: flex-start; /* keeps it at left */
+}

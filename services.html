@@ -5,18 +5,23 @@
   <title>Our Services - Integrated Business Strategies</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="components/service-grid.css">
   <style>
     /* Services page specific styles */
-    .services-hero {
-      position: relative;
-      width: 100%;
-      height: 350px;
-      background: linear-gradient(135deg, #04345b 0%, #2184c6 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 0;
-    }
+.services-hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background:
+    linear-gradient(rgba(4,52,91,0.6), rgba(33,132,198,0.6)),
+    url('images/heros/services-hero.png') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+
+
 
     .services-hero h1 {
       color: #fff;
@@ -41,13 +46,17 @@
       line-height: 1.8;
     }
 
+    /* Improved responsive grid that adapts to number of items */
     .services-grid {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
       padding: 0 40px 80px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 40px;
+      gap: 30px;
+      /* Desktop: Starts full width, shrinks to fit up to 5 per row */
+      grid-template-columns: repeat(auto-fit, minmax(max(220px, calc((100% - 120px) / 4)), 1fr));
+      /* Limit total grid height based on number of rows */
+      grid-auto-rows: minmax(auto, 1fr);
     }
 
     .service-tile {
@@ -58,37 +67,51 @@
       transition: transform 0.3s, box-shadow 0.3s;
       display: flex;
       flex-direction: column;
+      width: 100%;
+      /* Height scales based on grid columns */
+      height: 100%;
     }
 
     .service-tile:hover {
-      transform: translateY(-10px);
+      transform: translateY(-5px);
       box-shadow: 0 8px 30px rgba(0,0,0,0.15);
     }
 
     .service-tile img {
       width: 100%;
-      height: 250px;
+      height: auto;
+      max-height: 250px;
       object-fit: cover;
+      flex-shrink: 0;
+      display: block;
     }
 
     .service-tile-content {
-      padding: 30px;
+      padding: 25px;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
+      min-height: 0;
     }
 
     .service-tile h3 {
       color: #04345b;
-      font-size: 1.5rem;
-      margin-bottom: 15px;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+      flex-shrink: 0;
     }
 
     .service-tile p {
       color: #666;
-      line-height: 1.6;
-      margin-bottom: 20px;
+      line-height: 1.5;
+      margin-bottom: 15px;
       flex-grow: 1;
+      /* Text truncation with ellipsis */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .service-tile .learn-more {
@@ -98,6 +121,8 @@
       display: inline-flex;
       align-items: center;
       transition: color 0.3s;
+      flex-shrink: 0;
+      margin-top: auto;
     }
 
     .service-tile .learn-more:hover {
@@ -135,11 +160,12 @@
       line-height: 1.8;
     }
 
+    /* Improved additional services grid */
     .additional-grid {
       max-width: 1200px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 30px;
     }
 
@@ -179,6 +205,19 @@
       line-height: 1.5;
     }
 
+    /* Tablet adjustments - 2 columns */
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+      }
+      
+      .service-tile p {
+        -webkit-line-clamp: 4;
+      }
+    }
+
+    /* Mobile adjustments - 1 column */
     @media (max-width: 768px) {
       .services-hero h1 {
         font-size: 2rem;
@@ -187,10 +226,48 @@
       .services-grid {
         grid-template-columns: 1fr;
         padding: 0 20px 60px;
+        gap: 30px;
+      }
+      
+      .service-tile {
+        min-height: 420px;
+      }
+      
+      .service-tile img {
+        height: 220px;
+      }
+      
+      .service-tile p {
+        -webkit-line-clamp: 5;
       }
 
       .additional-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .services-intro {
+        padding: 0 20px;
+      }
+
+      .additional-services {
+        padding: 60px 20px;
+      }
+    }
+
+    /* Very small screens */
+    @media (max-width: 480px) {
+      .service-tile-content {
+        padding: 20px;
+      }
+      
+      .service-tile h3 {
+        font-size: 1.2rem;
+      }
+      
+      .service-tile p {
+        -webkit-line-clamp: 4;
+        font-size: 0.9rem;
       }
     }
   </style>
@@ -218,42 +295,42 @@
 <!-- Main Services Grid -->
 <section class="services-grid">
 
-  <!-- PPE Manufacturing Service -->
+  <!-- SHREQ Training Service-->
   <div class="service-tile">
-    <img src="images/services/ppe.jpg" alt="PPE Manufacturing">
+    <img src="images\services\SHREQ Training.png" alt="SHREQ Training">
     <div class="service-tile-content">
-      <h3>PPE Manufacturing and Supply</h3>
+      <h3>SHREQ Training</h3>
       <p>
-        High-quality personal protective equipment manufactured to international standards. We provide comprehensive PPE solutions
-        including safety gear, protective clothing, and specialized equipment for various industries.
+        Our comprehensive SHREQ training programs equip personnel with essential knowledge 
+        and practical skills in Safety, Health, Risk, Environmental, and Quality management
       </p>
-      <a href="ppe-manufacturing.html" class="learn-more">Learn More</a>
+      <a href="shreq-training.html" class="learn-more">Learn More</a>
     </div>
   </div>
 
-  <!-- Cleaning Services -->
+  <!-- ISO Certification -->
   <div class="service-tile">
-    <img src="images/services/cleaning.jpg" alt="Commercial Cleaning">
+    <img src="images\services\ISO Certificates.png" alt="ISO Certification">
     <div class="service-tile-content">
-      <h3>Commercial & Industrial Cleaning</h3>
+      <h3>ISO Certification</h3>
       <p>
-        Professional cleaning services for commercial and industrial facilities. Our trained teams deliver thorough,
-        reliable cleaning solutions that maintain the highest standards of hygiene and workplace safety.
+        We provide expert guidance for ISO 9001 Quality Management, ISO 14001 Environmental Management, 
+        ISO 45001 Occupational Health & Safety, and ISO 22000 Food Safety certifications.
       </p>
-      <a href="cleaning-services.html" class="learn-more">Learn More</a>
+      <a href="iso-certification.html" class="learn-more">Learn More</a>
     </div>
   </div>
 
-  <!-- Petroleum Supply -->
+    <!-- SETAS -->
   <div class="service-tile">
-    <img src="images/services/petroleum.jpg" alt="Petroleum Products">
+    <img src="images\services\setas.png" alt="SETAs">
     <div class="service-tile-content">
-      <h3>Petroleum Products Supply</h3>
+      <h3>SETA</h3>
       <p>
-        Reliable supply of petroleum products and gas for industrial and commercial applications. We ensure consistent
-        delivery of quality fuel products with comprehensive logistics support.
+      We offer SETA-accredited training programs through Health & Public Safety (HPS), 
+      Energy (EN), and Quality sectors, providing nationally recognized qualifications.
       </p>
-      <a href="petroleum-supply.html" class="learn-more">Learn More</a>
+      <a href="setas.html" class="learn-more">Learn More</a>
     </div>
   </div>
 

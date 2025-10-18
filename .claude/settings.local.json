@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(copy loadHeader.js loadComponents.js)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Services - Integrated Business Strategies</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Services page specific styles */
+    .services-hero {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      background: linear-gradient(135deg, #04345b 0%, #2184c6 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 0;
+    }
+
+    .services-hero h1 {
+      color: #fff;
+      font-size: 3rem;
+      text-align: center;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      padding: 0 20px;
+    }
+
+    .services-intro {
+      max-width: 1200px;
+      margin: 60px auto;
+      text-align: center;
+      padding: 0 40px;
+    }
+
+    .services-intro p {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 800px;
+      margin: 20px auto;
+      line-height: 1.8;
+    }
+
+    .services-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+    }
+
+    .service-tile {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-tile:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+
+    .service-tile img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .service-tile-content {
+      padding: 30px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-tile h3 {
+      color: #04345b;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .service-tile p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .service-tile .learn-more {
+      color: #2184c6;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.3s;
+    }
+
+    .service-tile .learn-more:hover {
+      color: #04345b;
+    }
+
+    .service-tile .learn-more::after {
+      content: '→';
+      margin-left: 8px;
+      transition: transform 0.3s;
+    }
+
+    .service-tile .learn-more:hover::after {
+      transform: translateX(5px);
+    }
+
+    /* Additional Services Section */
+    .additional-services {
+      background: #f7f8fa;
+      padding: 80px 40px;
+      margin-top: 60px;
+    }
+
+    .additional-services h2 {
+      text-align: center;
+      color: #04345b;
+      margin-bottom: 20px;
+    }
+
+    .additional-services-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 50px;
+      color: #666;
+      line-height: 1.8;
+    }
+
+    .additional-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .additional-item {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .additional-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .additional-item-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #04345b 0%, #2184c6 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: #fff;
+      font-size: 24px;
+    }
+
+    .additional-item h4 {
+      color: #04345b;
+      margin-bottom: 10px;
+    }
+
+    .additional-item p {
+      color: #666;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .services-hero h1 {
+        font-size: 2rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px 60px;
+      }
+
+      .additional-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header Placeholder - Will be loaded dynamically -->
+<div id="header-placeholder"></div>
+
+<!-- Services Hero Section -->
+<div class="services-hero">
+  <h1>Our Services</h1>
+</div>
+
+<!-- Services Introduction -->
+<section class="services-intro">
+  <p class="section-subtitle">WHAT WE DO</p>
+  <h2>Comprehensive Business Solutions</h2>
+  <p>
+    Integrated Business Strategies offers a wide range of specialized services designed to meet the diverse needs of South African businesses.
+    From manufacturing and supply chain solutions to facility management and petroleum products, we deliver excellence across all sectors.
+  </p>
+</section>
+
+<!-- Main Services Grid -->
+<section class="services-grid">
+
+  <!-- PPE Manufacturing Service -->
+  <div class="service-tile">
+    <img src="images/services/ppe.jpg" alt="PPE Manufacturing">
+    <div class="service-tile-content">
+      <h3>PPE Manufacturing and Supply</h3>
+      <p>
+        High-quality personal protective equipment manufactured to international standards. We provide comprehensive PPE solutions
+        including safety gear, protective clothing, and specialized equipment for various industries.
+      </p>
+      <a href="ppe-manufacturing.html" class="learn-more">Learn More</a>
+    </div>
+  </div>
+
+  <!-- Cleaning Services -->
+  <div class="service-tile">
+    <img src="images/services/cleaning.jpg" alt="Commercial Cleaning">
+    <div class="service-tile-content">
+      <h3>Commercial & Industrial Cleaning</h3>
+      <p>
+        Professional cleaning services for commercial and industrial facilities. Our trained teams deliver thorough,
+        reliable cleaning solutions that maintain the highest standards of hygiene and workplace safety.
+      </p>
+      <a href="cleaning-services.html" class="learn-more">Learn More</a>
+    </div>
+  </div>
+
+  <!-- Petroleum Supply -->
+  <div class="service-tile">
+    <img src="images/services/petroleum.jpg" alt="Petroleum Products">
+    <div class="service-tile-content">
+      <h3>Petroleum Products Supply</h3>
+      <p>
+        Reliable supply of petroleum products and gas for industrial and commercial applications. We ensure consistent
+        delivery of quality fuel products with comprehensive logistics support.
+      </p>
+      <a href="petroleum-supply.html" class="learn-more">Learn More</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- Additional Services Section -->
+<section class="additional-services">
+  <h2>Additional Services</h2>
+  <p class="additional-services-intro">
+    Beyond our core offerings, we provide specialized consulting and support services to help your business thrive in today's competitive landscape.
+  </p>
+
+  <div class="additional-grid">
+    <div class="additional-item">
+      <div class="additional-item-icon">📊</div>
+      <h4>Business Consulting</h4>
+      <p>Strategic planning and operational optimization to drive growth and efficiency.</p>
+    </div>
+
+    <div class="additional-item">
+      <div class="additional-item-icon">🎓</div>
+      <h4>Training & Development</h4>
+      <p>Comprehensive training programs to upskill your workforce and enhance productivity.</p>
+    </div>
+
+    <div class="additional-item">
+      <div class="additional-item-icon">⚙️</div>
+      <h4>Engineering Solutions</h4>
+      <p>Technical expertise and engineering support for complex industrial challenges.</p>
+    </div>
+
+    <div class="additional-item">
+      <div class="additional-item-icon">✅</div>
+      <h4>Compliance Support</h4>
+      <p>Ensuring your business meets all regulatory requirements and industry standards.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="meeting-section centered full-width-section">
+  <p class="section-subtitle">Ready to get started?</p>
+  <h3>Let's Discuss Your Needs</h3>
+  <a href="contact.html" class="contact-btn">CONTACT US</a>
+</section>
+
+<!-- Footer Placeholder - Will be loaded dynamically -->
+<div id="footer-placeholder"></div>
+
+<!-- Include component loader and related scripts -->
+<script src="js/loadComponents.js"></script>
+<script src="js/headerScroll.js"></script>
+<script src="js/dropdown.js"></script>
+<script src="js/mobileMenu.js"></script>
+<script src="js/smoothScroll.js"></script>
+</body>
+</html>
